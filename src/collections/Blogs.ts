@@ -1,12 +1,13 @@
 import { CollectionConfig } from "payload/types";
-import { Hero } from "../blocks/Hero";
-import { Carousel } from "../blocks/Carousel";
+import { RichText } from "../blocks/RichText";
+import { Image } from "../blocks/Image";
+import { Code } from "../blocks/Code";
 
-const Pages: CollectionConfig = {
-  slug: "pages",
+const Blogs: CollectionConfig = {
+  slug: "blogs",
   labels: {
-    singular: "Page",
-    plural: "Pages",
+    singular: "Blog",
+    plural: "Blogs",
   },
   admin: {
     useAsTitle: "name",
@@ -31,9 +32,9 @@ const Pages: CollectionConfig = {
       name: "layout",
       label: "Layout",
       type: "blocks",
-      blocks: [Hero, Carousel],
+      blocks: [RichText, Image, Code],
     },
   ],
 };
 
-export default Pages;
+export default Blogs;

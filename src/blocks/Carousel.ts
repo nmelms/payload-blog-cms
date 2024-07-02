@@ -8,7 +8,7 @@ export const Carousel: Block = {
   },
   fields: [
     {
-      name: "images",
+      name: "Featured",
       type: "array",
       minRows: 1,
       maxRows: 3,
