@@ -8,7 +8,7 @@ export const RichText: Block = {
   },
   fields: [
     {
-      name: "Text",
+      name: "richText",
       type: "richText",
     },
   ],
