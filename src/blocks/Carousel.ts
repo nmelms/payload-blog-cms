@@ -8,7 +8,7 @@ export const Carousel: Block = {
   },
   fields: [
     {
-      name: "Featured",
+      name: "featured",
       type: "array",
       minRows: 1,
       maxRows: 3,
@@ -22,7 +22,7 @@ export const Carousel: Block = {
         {
           name: "link",
           type: "relationship",
-          relationTo: "pages",
+          relationTo: "blogs",
           required: true,
         },
       ],
