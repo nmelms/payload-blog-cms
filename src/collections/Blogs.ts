@@ -39,6 +39,18 @@ const Blogs: CollectionConfig = {
       type: "blocks",
       blocks: [RichText, Image, Code],
     },
+    {
+      name: "tags",
+      label: "Tags",
+      type: "array",
+      fields: [
+        {
+          name: "tag",
+          type: "text",
+          required: true,
+        },
+      ],
+    },
   ],
 };
 

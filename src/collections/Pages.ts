@@ -68,6 +68,15 @@ const Pages: CollectionConfig = {
         condition: (data) => data.pageType === "home",
       },
     },
+    {
+      name: "featuredBlog",
+      label: "Featured Blog",
+      type: "relationship",
+      relationTo: "blogs",
+      admin: {
+        condition: (data) => data.pageType === "home",
+      },
+    },
 
     {
       name: "layout",
