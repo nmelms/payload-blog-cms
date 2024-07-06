@@ -16,6 +16,30 @@ const Pages: CollectionConfig = {
   },
   fields: [
     {
+      name: "pageType",
+      label: "Page Type",
+      type: "select",
+      options: [
+        {
+          label: "Home",
+          value: "home",
+        },
+        {
+          label: "About Me",
+          value: "about-me",
+        },
+        {
+          label: "Contact",
+          value: "contact",
+        },
+        {
+          label: "Socials",
+          value: "socials",
+        },
+      ],
+      required: true,
+    },
+    {
       name: "name",
       label: "Name",
       type: "text",
@@ -27,6 +51,24 @@ const Pages: CollectionConfig = {
       type: "text",
       required: false,
     },
+    // homepage fields
+    {
+      name: "heroHeading",
+      label: "Hero Heading",
+      type: "text",
+      admin: {
+        condition: (data) => data.pageType === "home",
+      },
+    },
+    {
+      name: "heroSubHeading",
+      label: "Hero Subheading",
+      type: "text",
+      admin: {
+        condition: (data) => data.pageType === "home",
+      },
+    },
+
     {
       name: "layout",
       label: "Layout",

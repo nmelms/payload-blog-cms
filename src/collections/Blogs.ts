@@ -29,6 +29,11 @@ const Blogs: CollectionConfig = {
       required: false,
     },
     {
+      name: "tag",
+      label: "tag",
+      type: "text",
+    },
+    {
       name: "layout",
       label: "Layout",
       type: "blocks",
