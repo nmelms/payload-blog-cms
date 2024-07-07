@@ -39,6 +39,11 @@ const Blogs: CollectionConfig = {
       type: "text",
     },
     {
+      name: "test",
+      label: "anothertestfield",
+      type: "text",
+    },
+    {
       name: "layout",
       label: "Layout",
       type: "blocks",
