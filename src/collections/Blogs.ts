@@ -44,6 +44,16 @@ const Blogs: CollectionConfig = {
       type: "text",
     },
     {
+      name: "fdasfdasfas",
+      label: "fdasfdasfdsaf",
+      type: "text",
+    },
+    {
+      name: "fourth",
+      label: "fouthdasfdsaf",
+      type: "text",
+    },
+    {
       name: "layout",
       label: "Layout",
       type: "blocks",
