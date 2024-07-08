@@ -34,31 +34,6 @@ const Blogs: CollectionConfig = {
       type: "text",
     },
     {
-      name: "testField",
-      label: "testField",
-      type: "text",
-    },
-    {
-      name: "test",
-      label: "anothertestfield",
-      type: "text",
-    },
-    {
-      name: "fdasfdasfas",
-      label: "fdasfdasfdsaf",
-      type: "text",
-    },
-    {
-      name: "fourth",
-      label: "fouthdasfdsaf",
-      type: "text",
-    },
-    {
-      name: "five",
-      label: "five",
-      type: "text",
-    },
-    {
       name: "layout",
       label: "Layout",
       type: "blocks",
