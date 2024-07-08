@@ -54,6 +54,11 @@ const Blogs: CollectionConfig = {
       type: "text",
     },
     {
+      name: "five",
+      label: "five",
+      type: "text",
+    },
+    {
       name: "layout",
       label: "Layout",
       type: "blocks",
