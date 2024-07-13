@@ -29,6 +29,13 @@ const Blogs: CollectionConfig = {
       required: false,
     },
     {
+      name: "heroImage",
+      label: "Hero Image",
+      type: "upload",
+      relationTo: "media",
+      required: true,
+    },
+    {
       name: "tag",
       label: "tag",
       type: "text",
