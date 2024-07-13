@@ -19,6 +19,19 @@ import Pages from "./collections/Pages";
 import { Media } from "./collections/Media";
 import Blogs from "./collections/Blogs";
 
+const adapter = s3Adapter({
+  config: {
+    endpoint: process.env.S3_ENDPOINT,
+    credentials: {
+      accessKeyId: process.env.S3_ACCESS_KEY_ID,
+      secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
+    },
+    region: process.env.S3_REGION,
+    // ... Other S3 configuration
+  },
+  bucket: process.env.S3_BUCKET,
+});
+
 export default buildConfig({
   admin: {
     user: Users.slug,
@@ -41,21 +54,10 @@ export default buildConfig({
   },
   plugins: [
     cloudStorage({
+      enabled: true,
       collections: {
-        // Enable cloud storage for Media collection
         media: {
-          // Create the S3 adapter
-          adapter: s3Adapter({
-            config: {
-              endpoint: process.env.S3_ENDPOINT,
-              region: "us-east-2",
-              credentials: {
-                accessKeyId: process.env.S3_ACCESS_KEY_ID,
-                secretAccessKey: process.env.S3_SECRET_ACCESS_KEY,
-              },
-            },
-            bucket: process.env.S3_BUCKET,
-          }),
+          adapter: adapter, // see docs for the adapter you want to use
         },
       },
     }),
