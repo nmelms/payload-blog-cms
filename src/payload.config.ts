@@ -57,7 +57,16 @@ export default buildConfig({
       enabled: true,
       collections: {
         media: {
-          adapter: adapter, // see docs for the adapter you want to use
+          adapter: adapter,
+          generateFileURL: ({ filename, prefix }) => {
+            return [
+              "https://dv8881tsav6g8.cloudfront.net/media",
+              prefix,
+              filename,
+            ]
+              .filter(Boolean)
+              .join("/");
+          }, // see docs for the adapter you want to use
         },
       },
     }),
