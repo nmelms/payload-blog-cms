@@ -11,7 +11,7 @@ import { s3Adapter } from "@payloadcms/plugin-cloud-storage/s3";
 import {
   HTMLConverterFeature,
   lexicalEditor,
-  lexicalHTML,
+  TreeViewFeature,
 } from "@payloadcms/richtext-lexical";
 
 import Users from "./collections/Users";
@@ -40,7 +40,7 @@ export default buildConfig({
   editor: lexicalEditor({
     features: ({ defaultFeatures }) => [
       ...defaultFeatures,
-
+      TreeViewFeature(),
       HTMLConverterFeature({}),
     ],
   }),

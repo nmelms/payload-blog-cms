@@ -1,0 +1,28 @@
+diff --git a/node_modules/@payloadcms/richtext-lexical/dist/field/features/converters/html/converter/converters/paragraph.js b/node_modules/@payloadcms/richtext-lexical/dist/field/features/converters/html/converter/converters/paragraph.js
+index d4e78d4..0d58f63 100644
+--- a/node_modules/@payloadcms/richtext-lexical/dist/field/features/converters/html/converter/converters/paragraph.js
++++ b/node_modules/@payloadcms/richtext-lexical/dist/field/features/converters/html/converter/converters/paragraph.js
+@@ -19,7 +19,22 @@ const ParagraphHTMLConverter = {
+                 parent
+             }
+         });
+-        return `<p>${childrenText}</p>`;
++        
++    let pTag = '<p>'
++    let style = ''
++    if (!!node.format) {
++      style += `text-align: ${node.format};`
++    }
++
++    if (node.indent > 0) {
++      style += `text-indent:${node.indent}em;`
++    }
++
++    if (!!style) {
++      pTag = `<p style="${style}">`
++    }
++
++    return `${pTag}${childrenText}</p>`
+     },
+     nodeTypes: [
+         'paragraph'
