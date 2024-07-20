@@ -36,8 +36,8 @@ const Blogs: CollectionConfig = {
       required: true,
     },
     {
-      name: "tag",
-      label: "tag",
+      name: "excerpt",
+      label: "Excerpt",
       type: "text",
     },
     {
